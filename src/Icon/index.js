@@ -9,5 +9,19 @@ import IconChevronRight from "./IconChevronRight";
 import IconSearch from "./IconSearch";
 import IconBell from "./IconBell";
 import IconTrash from "./IconTrash";
+import IconShare from "./IconShare";
 
-export { IconEdit, IconMail, IconBuilding, IconPhone, IconWeb, IconWrench, IconLibrary, IconChevronRight, IconSearch, IconBell, IconTrash };
+export {
+  IconEdit,
+  IconMail,
+  IconBuilding,
+  IconPhone,
+  IconWeb,
+  IconWrench,
+  IconLibrary,
+  IconChevronRight,
+  IconSearch,
+  IconBell,
+  IconTrash,
+  IconShare,
+};

@@ -14,12 +14,13 @@ import {
   IconSearch,
   IconBell,
   IconTrash,
+  IconShare,
 } from "../Icon";
 
 export default function Dashboard() {
   const [toggle, setToggle] = useState(true);
   return (
-    <div className="px-8 py-4">
+    <div className="px-8 py-2">
       <div className="flex justify-between">
         <div className="flex self-center">
           <p className="text-sm opacity-25 mr-3">Layanan IT</p>
@@ -39,7 +40,7 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="flex mt-8">
+      <div className="flex mt-4">
         <div className="bg-white w-1/5 shadow-lg rounded-md grid justify-items-stretch pb-10">
           <div className="bg-building h-36" />
           <div className="bg-white justify-self-center flex px-2 w-32 h-32 -mt-16 rounded-full border-2 border-gray-200">
@@ -93,7 +94,7 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="w-4/5 ml-8">
-          <div className="w-full bg-white shadow-lg rounded-md px-4 py-6">
+          <div className="w-full h-1/5 bg-white shadow-lg rounded-md px-4 py-6">
             <div className="flex justify-between mb-4">
               <p className="font-bold text-lg">Lokasi</p>
               <p className="text-sm text-green-700 cursor-pointer">Lihat Semua</p>
@@ -122,48 +123,86 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <div className="flex mt-8">
-            <div className="w-2/5 bg-white shadow-lg rounded-md px-4 py-5">
-              <div className="flex justify-between">
-                <p className="font-bold text-lg">Akun Bank</p>
-                <button className="bg-green-700 rounded-md px-4 py-1 text-white text-sm">+ Tambah Akun Bank</button>
-              </div>
-              <div className="flex mt-5">
-                <div class="h-24 w-32 p-4 rounded-lg bg-gradient-to-br from-yellow-400 to-lime-600 grid place-content-end">
-                  <img src={visaLogo} alt="visa" className="w-9" />
+          <div className="flex pt-8 h-4/5 grid grid-cols-2">
+            <div className=" grid grid-rows-2 mr-16">
+              <div className="bg-white shadow-lg rounded-md px-4 py-5">
+                <div className="flex justify-between">
+                  <p className="font-bold text-lg">Akun Bank</p>
+                  <button className="bg-green-700 rounded-md px-4 py-1 text-white text-sm">+ Tambah Akun Bank</button>
                 </div>
-                <div className="ml-6 grid content-between">
-                  <div className="flex">
-                    <p className="font-bold">Bank KB Bukopin</p>
-                    <div className="flex self-center ml-20 text-green-700 cursor-pointer">
-                      <IconEdit />
-                      <IconTrash />
+                <div className="flex mt-5">
+                  <div class="h-24 w-32 p-4 rounded-lg bg-gradient-to-br from-yellow-400 to-lime-600 grid place-content-end">
+                    <img src={visaLogo} alt="visa" className="w-9" />
+                  </div>
+                  <div className="ml-6 grid content-between">
+                    <div className="flex">
+                      <p className="font-bold">Bank KB Bukopin</p>
+                      <div className="flex self-center ml-20 text-green-700 cursor-pointer">
+                        <IconEdit />
+                        <IconTrash />
+                      </div>
+                    </div>
+                    <div className="text-sm opacity-70">
+                      <p>**** 0876 - Yusron Taufiq</p>
+                      <p>IDR</p>
                     </div>
                   </div>
-                  <div className="text-sm opacity-70">
-                    <p>**** 0876 - Yusron Taufiq</p>
-                    <p>IDR</p>
+                </div>
+                <div className="flex mt-5">
+                  <div class="h-24 w-32 p-4 rounded-lg bg-gradient-to-r from-cyan-600 to-cyan-400 grid place-content-end">
+                    <img src={visaLogo} alt="visa" className="w-9" />
                   </div>
-                </div>
-              </div>
-              <div className="flex mt-5">
-                <div class="h-24 w-32 p-4 rounded-lg bg-gradient-to-r from-cyan-600 to-cyan-400 grid place-content-end">
-                  <img src={visaLogo} alt="visa" className="w-9" />
-                </div>
-                <div className="ml-6 grid content-between">
-                  <div className="flex">
-                    <p className="font-bold">Bank KB Bukopin</p>
-                    <div className="flex self-center ml-20 text-green-700 cursor-pointer">
-                      <IconEdit />
-                      <IconTrash />
+                  <div className="ml-6 grid content-between">
+                    <div className="flex">
+                      <p className="font-bold">Bank KB Bukopin</p>
+                      <div className="flex self-center ml-20 text-green-700 cursor-pointer">
+                        <IconEdit />
+                        <IconTrash />
+                      </div>
+                    </div>
+                    <div className="text-sm opacity-70">
+                      <p>**** 5525 - Si Tampan</p>
+                      <p>USD</p>
                     </div>
                   </div>
-                  <div className="text-sm opacity-70">
-                    <p>**** 5525 - Si Tampan</p>
-                    <p>USD</p>
+                </div>
+              </div>
+              <div className="bg-white shadow-lg rounded-md px-4 py-5 mt-8">
+                <div className="flex justify-between mb-6">
+                  <p className="font-bold text-lg">Relasi</p>
+                  <p className="text-sm text-green-700 cursor-pointer">Lihat Semua</p>
+                </div>
+                <div className="flex">
+                  <IconShare />
+                  <div className="ml-3">
+                    <p className="font-bold text-xl text-left">20</p>
+                    <p className="text-sm opacity-50">Memiliki</p>
+                  </div>
+                </div>
+                <div className="flex mt-4">
+                  <IconShare />
+                  <div className="ml-3">
+                    <p className="font-bold text-xl text-left">108</p>
+                    <p className="text-sm opacity-50">Menggunakan</p>
+                  </div>
+                </div>
+                <div className="flex mt-4">
+                  <IconShare />
+                  <div className="ml-3">
+                    <p className="font-bold text-xl text-left">67</p>
+                    <p className="text-sm opacity-50">Meminjam</p>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className=" h-full bg-white shadow-lg rounded-md px-4 py-5">
+              <p className="font-bold text-lg mb-8">Aktivitas</p>
+              <p>Yusron baru saja menambahkan lokasi baru Kantor Cabang Jagakarsa</p>
+              <p className="text-sm opacity-25 mb-4">Hari ini, 06:00</p>
+              <p>Bintang baru saja menghapus sublokasi KCP Tebet 4 dari induk Kantor Cabang Tebet</p>
+              <p className="text-sm opacity-25 mb-4">Kemaren, 17:32</p>
+              <p>Yusron melakukan perubahan profil pada induk Kantor Cabang Bekasi</p>
+              <p className="text-sm opacity-25 mb-4">Kemaren, 17:32</p>
             </div>
           </div>
         </div>
