@@ -8,5 +8,6 @@ import IconLibrary from "./IconLibrary";
 import IconChevronRight from "./IconChevronRight";
 import IconSearch from "./IconSearch";
 import IconBell from "./IconBell";
+import IconTrash from "./IconTrash";
 
-export { IconEdit, IconMail, IconBuilding, IconPhone, IconWeb, IconWrench, IconLibrary, IconChevronRight, IconSearch, IconBell };
+export { IconEdit, IconMail, IconBuilding, IconPhone, IconWeb, IconWrench, IconLibrary, IconChevronRight, IconSearch, IconBell, IconTrash };

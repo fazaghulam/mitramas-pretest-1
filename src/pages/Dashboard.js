@@ -1,7 +1,20 @@
 import { useState } from "react";
 import logo from "../assets/company-logo.png";
 import profil from "../assets/profil.jpg";
-import { IconBuilding, IconEdit, IconPhone, IconWeb, IconMail, IconWrench, IconLibrary, IconChevronRight, IconSearch, IconBell } from "../Icon";
+import visaLogo from "../assets/visa-logo.png";
+import {
+  IconBuilding,
+  IconEdit,
+  IconPhone,
+  IconWeb,
+  IconMail,
+  IconWrench,
+  IconLibrary,
+  IconChevronRight,
+  IconSearch,
+  IconBell,
+  IconTrash,
+} from "../Icon";
 
 export default function Dashboard() {
   const [toggle, setToggle] = useState(true);
@@ -82,29 +95,73 @@ export default function Dashboard() {
         <div className="w-4/5 ml-8">
           <div className="w-full bg-white shadow-lg rounded-md px-4 py-6">
             <div className="flex justify-between mb-4">
-              <p className="font-bold text-xl">Lokasi</p>
+              <p className="font-bold text-lg">Lokasi</p>
               <p className="text-sm text-green-700 cursor-pointer">Lihat Semua</p>
             </div>
             <div className="grid gap-x-8 grid-cols-3">
               <div className="bg-green-700 rounded-md p-4 flex justify-between text-white">
                 <IconBuilding />
                 <div>
-                  <p className="font-bold text-2xl text-center">20</p>
+                  <p className="font-bold text-2xl text-right">20</p>
                   <p className="text-sm opacity-50">Induk</p>
                 </div>
               </div>
               <div className="bg-green-600 rounded-md p-4 flex justify-between text-white">
                 <IconWrench />
                 <div>
-                  <p className="font-bold text-2xl text-center">3</p>
+                  <p className="font-bold text-2xl text-right">3</p>
                   <p className="text-sm opacity-50">Sub Lokasi Level 1</p>
                 </div>
               </div>
               <div className="bg-green-500 rounded-md p-4 flex justify-between text-white">
                 <IconLibrary />
                 <div>
-                  <p className="font-bold text-2xl text-center">1</p>
+                  <p className="font-bold text-2xl text-right">1</p>
                   <p className="text-sm opacity-50">Sub Lokasi Level 2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex mt-8">
+            <div className="w-2/5 bg-white shadow-lg rounded-md px-4 py-5">
+              <div className="flex justify-between">
+                <p className="font-bold text-lg">Akun Bank</p>
+                <button className="bg-green-700 rounded-md px-4 py-1 text-white text-sm">+ Tambah Akun Bank</button>
+              </div>
+              <div className="flex mt-5">
+                <div class="h-24 w-32 p-4 rounded-lg bg-gradient-to-br from-yellow-400 to-lime-600 grid place-content-end">
+                  <img src={visaLogo} alt="visa" className="w-9" />
+                </div>
+                <div className="ml-6 grid content-between">
+                  <div className="flex">
+                    <p className="font-bold">Bank KB Bukopin</p>
+                    <div className="flex self-center ml-20 text-green-700 cursor-pointer">
+                      <IconEdit />
+                      <IconTrash />
+                    </div>
+                  </div>
+                  <div className="text-sm opacity-70">
+                    <p>**** 0876 - Yusron Taufiq</p>
+                    <p>IDR</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex mt-5">
+                <div class="h-24 w-32 p-4 rounded-lg bg-gradient-to-r from-cyan-600 to-cyan-400 grid place-content-end">
+                  <img src={visaLogo} alt="visa" className="w-9" />
+                </div>
+                <div className="ml-6 grid content-between">
+                  <div className="flex">
+                    <p className="font-bold">Bank KB Bukopin</p>
+                    <div className="flex self-center ml-20 text-green-700 cursor-pointer">
+                      <IconEdit />
+                      <IconTrash />
+                    </div>
+                  </div>
+                  <div className="text-sm opacity-70">
+                    <p>**** 5525 - Si Tampan</p>
+                    <p>USD</p>
+                  </div>
                 </div>
               </div>
             </div>
