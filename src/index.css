@@ -13,6 +13,14 @@ code {
     monospace;
 }
 
+.green{
+  background-color: #EBF2EC;
+}
+
+.hover-green:hover{
+  background-color: #EBF2EC;
+}
+
 .bg-building {
   background-image: url("../src/assets/building.jpg");
   background-repeat: no-repeat;

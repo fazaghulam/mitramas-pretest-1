@@ -15,19 +15,23 @@ import {
   IconBell,
   IconTrash,
   IconShare,
+  IconMenu,
 } from "../Icon";
 
-export default function Dashboard() {
+export default function Dashboard({ setIsOpen }) {
   const [toggle, setToggle] = useState(true);
   return (
-    <div className="px-8 py-2">
+    <div className="pr-8 pl-8 md:pl-20 py-2">
       <div className="flex justify-between">
-        <div className="flex self-center">
+        <div className="self-center hidden md:flex">
           <p className="text-sm opacity-25 mr-3">Layanan IT</p>
           <div className="opacity-25 self-center">
             <IconChevronRight />
           </div>
           <p className="text-sm font-bold ml-3 ">Mitramas Infosys Global</p>
+        </div>
+        <div className="block md:hidden cursor-pointer" onClick={setIsOpen}>
+          <IconMenu />
         </div>
         <div className="flex">
           <div className="flex mr-8 opacity-70 self-center cursor-pointer">
@@ -124,7 +128,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="flex pt-8 h-4/5 grid grid-cols-1 lg:grid-cols-2">
-            <div className="w-full lg:w-auto grid grid-rows-2 mr-16">
+            <div className="w-full lg:w-auto grid grid-rows-2">
               <div className="bg-white shadow-lg rounded-md px-4 py-5">
                 <div className="flex justify-between">
                   <p className="font-bold text-lg">Akun Bank</p>
@@ -195,7 +199,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="mt-8 lg:mt-0 h-full bg-white shadow-lg rounded-md px-4 py-5">
+            <div className="mt-8 lg:ml-8 xl:ml-16 lg:mt-0 h-full bg-white shadow-lg rounded-md px-4 py-5">
               <p className="font-bold text-lg mb-8">Aktivitas</p>
               <p>Yusron baru saja menambahkan lokasi baru Kantor Cabang Jagakarsa</p>
               <p className="text-sm opacity-25 mb-4">Hari ini, 06:00</p>
